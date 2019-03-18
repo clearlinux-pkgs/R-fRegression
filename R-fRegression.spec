@@ -4,17 +4,12 @@
 #
 Name     : R-fRegression
 Version  : 3042.82
-Release  : 9
+Release  : 10
 URL      : https://cran.r-project.org/src/contrib/fRegression_3042.82.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fRegression_3042.82.tar.gz
 Summary  : Rmetrics - Regression Based Decision and Prediction
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-fBasics
-Requires: R-lmtest
-Requires: R-polspline
-Requires: R-timeDate
-Requires: R-timeSeries
 BuildRequires : R-fBasics
 BuildRequires : R-lmtest
 BuildRequires : R-polspline
@@ -23,8 +18,7 @@ BuildRequires : R-timeSeries
 BuildRequires : buildreq-R
 
 %description
-It implements a wrapper for several regression models available in the base and
-	contributed packages of R.
+No detailed description available
 
 %prep
 %setup -q -c -n fRegression
@@ -34,11 +28,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538578963
+export SOURCE_DATE_EPOCH=1552898772
 
 %install
+export SOURCE_DATE_EPOCH=1552898772
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1538578963
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -73,8 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library fRegression|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  fRegression || :
 
 
 %files
@@ -101,10 +94,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/fRegression/obsolete/src/LmTests.f
 /usr/lib64/R/library/fRegression/obsolete/src/Makevars
 /usr/lib64/R/library/fRegression/obsolete/src/MarsModelling.f
+/usr/lib64/R/library/fRegression/tests/doRUnit.R
 /usr/lib64/R/library/fRegression/unitTests/Makefile
-/usr/lib64/R/library/fRegression/unitTests/report.html
-/usr/lib64/R/library/fRegression/unitTests/report.txt
-/usr/lib64/R/library/fRegression/unitTests/reportSummary.txt
 /usr/lib64/R/library/fRegression/unitTests/runTests.R
 /usr/lib64/R/library/fRegression/unitTests/runit.LPP2005.R
 /usr/lib64/R/library/fRegression/unitTests/runit.RegressionModelling.R
