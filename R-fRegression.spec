@@ -4,7 +4,7 @@
 #
 Name     : R-fRegression
 Version  : 3042.82
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/fRegression_3042.82.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fRegression_3042.82.tar.gz
 Summary  : Rmetrics - Regression Based Decision and Prediction
@@ -21,28 +21,29 @@ BuildRequires : R-polspline
 BuildRequires : R-timeDate
 BuildRequires : R-timeSeries
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-No detailed description available
+It implements a wrapper for several regression models available in the base and
+	contributed packages of R.
 
 %prep
 %setup -q -c -n fRegression
+cd %{_builddir}/fRegression
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571833604
+export SOURCE_DATE_EPOCH=1589584930
 
 %install
-export SOURCE_DATE_EPOCH=1571833604
+export SOURCE_DATE_EPOCH=1589584930
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
