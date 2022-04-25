@@ -4,7 +4,7 @@
 #
 Name     : R-fRegression
 Version  : 3042.82
-Release  : 34
+Release  : 35
 URL      : https://cran.r-project.org/src/contrib/fRegression_3042.82.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fRegression_3042.82.tar.gz
 Summary  : Rmetrics - Regression Based Decision and Prediction
