@@ -4,7 +4,7 @@
 #
 Name     : R-fRegression
 Version  : 4021.83
-Release  : 42
+Release  : 43
 URL      : https://cran.r-project.org/src/contrib/fRegression_4021.83.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fRegression_4021.83.tar.gz
 Summary  : Rmetrics - Regression Based Decision and Prediction
